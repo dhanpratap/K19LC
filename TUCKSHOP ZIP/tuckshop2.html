@@ -1,0 +1,112 @@
+<html>
+ <head>
+ <header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 17px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#PPS{background-color:skyblue;}
+#IBL {background-color:grey;}
+#IPL {background-color:brown;}
+#CC {background-color:black;}
+</style>
+</head>
+<body>
+
+<h1>Shops Available in LPU</h1><h2>Click on the shops for available items</h2>
+
+<button class="tablink" onclick="openCity('PPS', this, 'red')" id="defaultOpen">Tuck Shop Near BH-2</button>
+<button class="tablink" onclick="openCity('IBL', this, 'green')">Tuck Shop Near 34 Block</button>
+<button class="tablink" onclick="openCity('IPL', this, 'blue')">Tuck Shop Near 38 Block</button>
+<button class="tablink" onclick="openCity('CC', this, 'orange')">Tuck Shop Near Uni Mall</button>
+
+<div id="PPS" class="tabcontent">
+  <h1>..Available items..
+<ol>Books<br>
+Xerox<br>
+approns<br>
+lab manual's<br>lab eqiupments<br>
+</ol></h1>
+  <p>.............</p>
+</div>
+
+<div id="IBL" class="tabcontent">
+  <h1>..Available items..
+<ol>Books<br>
+Xerox<br>
+Pens<br>
+Bread boards<br>transistors,resistors<br></ol></h1>
+  <p>............</p> 
+</div>
+
+<div id="IPL" class="tabcontent">
+  <h1>..Available items..
+<ol>Books<br>
+Xerox<br>
+Charts<br>
+Geometry items<br>Dairy's,colour pens,colour paints<br></h1>
+  <p>............</p>
+</div>
+
+	<div id="CC" class="tabcontent">
+  <h1>..Available items..
+<ol>Books all in one<br>
+Xerox,prints B/W<br>
+and<br>
+lab manual's all subjects<br>lab eqiupments all courses<br></h1>
+  <p>..........</p>
+</div>
+
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<br>
+</header>
+ <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script src="jquery-1.10.2.min.js" type="text/javascript"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.7.7/xlsx.core.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.core.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ </head>
